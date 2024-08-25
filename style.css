@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(135deg, #f9fbe7, #e0f2f1);
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #80deea, #4fc3f7);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header .container {
+    position: relative;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    animation: flipIn 1.5s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+    animation: slideInFromTop 1.5s ease-out;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #b2dfdb;
+    animation: slideInFromTop 2s ease-out;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    padding: 30px 0;
+}
+
+section {
+    margin-bottom: 40px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+h2 {
+    border-bottom: 4px solid #80deea;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #80deea;
+    font-size: 2.2em;
+}
+
+/* Experience Section */
+.job {
+    margin-bottom: 30px;
+}
+
+.job h3 {
+    margin: 0;
+    color: #4fc3f7;
+    animation: rotateIn 1.5s ease-in-out;
+}
+
+/* Skills Section */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: linear-gradient(135deg, #80deea, #4fc3f7);
+    color: #fff;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+ul li:hover {
+    background: linear-gradient(135deg, #4fc3f7, #1e88e5);
+    transform: translateY(-8px) rotate(2deg);
+}
+
+/* Contact Form */
+form {
+    display: grid;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+label {
+    font-weight: bold;
+    color: #80deea;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #4fc3f7;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #80deea;
+    outline: none;
+    box-shadow: 0 0 10px rgba(128, 222, 234, 0.6);
+}
+
+button {
+    background: linear-gradient(135deg, #4fc3f7, #1e88e5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1e88e5, #4fc3f7);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4fc3f7, #1e88e5);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
