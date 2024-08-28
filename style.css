@@ -104,42 +104,71 @@ ul li:hover {
 form {
     display: grid;
     gap: 20px;
-    animation: fadeIn 1.5s ease-in-out;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between label and input */
 }
 
 label {
     font-weight: bold;
-    color: #80deea;
+    color: #00bcd4;
+    margin-bottom: 5px;
 }
 
 input, textarea {
     width: 100%;
     padding: 14px;
-    border: 2px solid #4fc3f7;
+    border: 2px solid #00bcd4;
     border-radius: 8px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    font-size: 1em;
 }
 
 input:focus, textarea:focus {
-    border-color: #80deea;
+    border-color: #0097a7;
     outline: none;
-    box-shadow: 0 0 10px rgba(128, 222, 234, 0.6);
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+    transform: scale(1.02);
 }
 
 button {
-    background: linear-gradient(135deg, #4fc3f7, #1e88e5);
+    background: linear-gradient(135deg, #0097a7, #00796b);
     color: #fff;
     border: none;
     padding: 15px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     animation: bounceIn 1s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1.1em;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #1e88e5, #4fc3f7);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #00796b, #004d40);
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Footer */
