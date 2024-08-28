@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="ganeshh.JPG" alt="Gummalla Ganesh Manikanata Kumar" class="profile-img">
+            <img src="ganeshh.JPG" alt="Profile photo of Gummalla Ganesh Manikanata Kumar" class="profile-img">
             <h1>Gummalla Ganesh Manikanata Kumar</h1>
             <p>Web Developer | Designer</p>
         </div>
@@ -18,7 +18,7 @@
     <main class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>"I’m Gummalla Ganesh Manikanata Kumar, an engineering student specializing in Electronics And Communication Engineering. I’m passionate about learning  technology and am currently focused on related project.".</p>
+            <p>I’m Gummalla Ganesh Manikanata Kumar, an engineering student specializing in Electronics And Communication Engineering. I’m passionate about learning technology and am currently focused on related projects.</p>
         </section>
 
         <section id="experience">
@@ -26,17 +26,16 @@
             <div class="job">
                 <h3>Cloud Computing</h3>
                 <ul>
-                    <li>Amazon Wed Services, Virtual
-                        Internship • Jun 2024 - Present (2 months).</li>
-                    <li>Cloud foundation, cloud computing, AWS,cloud.</li>
+                    <li>Amazon Web Services, Virtual Internship • Jun 2024 - Present (2 months)</li>
+                    <li>Cloud foundation, cloud computing, AWS, cloud.</li>
                 </ul>
             </div>
             <div class="job">
                 <h3>Generative AI</h3>
                 <p>Internship • Jun 2024 - Aug 2024 (2 months)</p>
                 <ul>
-                    <li>Generative AI.</li>
-                    <li>CHAT GPT.</li>
+                    <li>Generative AI</li>
+                    <li>ChatGPT</li>
                 </ul>
             </div>
         </section>
@@ -48,23 +47,36 @@
                 <li>Python</li>
                 <li>Cloud Computing</li>
                 <li>C Programming</li>
-                
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"  required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send Message</button>
+            <form id="contactForm" action="send_email.php" method="POST">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., +1234567890" pattern="[+][0-9]{1,3}[0-9]{3,14}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </fieldset>
             </form>
         </section>
     </main>
